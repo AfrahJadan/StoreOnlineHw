@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">StoreOnlineHw</string>
+    <string name="Product_name1">Iphone 12 64GB</string>
+    <string name="Price_name1">4500 SR</string>
+    <string name="isVip_1">yes</string>
+    <string name="quantityNumber_1">5</string>
+
+    <string name="Product_name2">Samsung Galaxy S21 Ultra</string>
+    <string name="Price_name2">4500 SR</string>
+    <string name="isVip_2">no</string>
+    <string name="quantityNumber_2">5</string>
+
+    <string name="Product_name3">Xiaomi 11T Pro</string>
+    <string name="Price_name3">2000 SR</string>
+    <string name="isVip_3">yes</string>
+    <string name="quantityNumber_3">0</string>
+
+    <string name="Product_name4">Huawei Y6p</string>
+    <string name="Price_name4">500 SR</string>
+    <string name="isVip_4">no</string>
+    <string name="quantityNumber_4">0</string>
+
+    <string name="Product_name5">Samsung Galaxy Z Flip3</string>
+    <string name="Price_name5">5000 SR</string>
+    <string name="isVip_5">yes</string>
+    <string name="quantityNumber_5">70</string>
+
+    <string name="Product_name6">Iphone 13</string>
+    <string name="Price_name6">6000 SR</string>
+    <string name="isVip_6">yes</string>
+    <string name="quantityNumber_6">36</string>
+    <string name="productName1" />
+    <string name="Price1" />
+    <string name="buy">BUY</string>
+    <string name="textview">TextView</string>
+
+</resources>
