@@ -1,5 +1,6 @@
-package com.example.hw_product_recycleview
+package com.example.storeonlinehw.productAdapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,9 +12,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.example.storeonlinehw.ProductDetails
 import com.example.storeonlinehw.R
 import com.example.storeonlinehw.model.Phone
-import com.example.storeonlinehw.productAdapter.BuyButton
 
 
 class ItemAdapter(
@@ -22,36 +23,40 @@ class ItemAdapter(
 ): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
 
-    class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
-        val buybutoon: Button = view.findViewById(R.id.buybutoon)
-        val priceview: TextView = view.findViewById(R.id.priceproduct)
+    class ItemViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        val productimg: ImageView = view.findViewById(R.id.ImgProduct)
         val name: TextView = view.findViewById(R.id.productName)
-        val productimg: ImageView = view.findViewById(R.id.imgProduct)
-        val Starfav: ImageView = view.findViewById(R.id.imageView2)
+        val priceview: TextView = view.findViewById(R.id.price_product)
+        val productStar: ImageView = view.findViewById(R.id.productVIP)
+        val buyQuantity: Button = view.findViewById(R.id.buy_button)
     }
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // create a new view
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
         return ItemViewHolder(adapterLayout)
     }
-
-
+    @SuppressLint("ResourceType")
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
         holder.productimg.setImageResource(item.imageProduct)
-        holder.priceview.text= item.price
         holder.name.text = item.name
-        holder.Starfav.isVisible = item.isVip
-        holder.buybutoon.setOnClickListener {
-            if (item.quantityNumber > 0)
-                Toast.makeText(context, "item available",Toast.LENGTH_SHORT).show()
-            val intent = Intent(context, BuyButton ::class.java )
-            intent.putExtra("name", item.name)
-            it.context.startActivity(intent)
-//I can not navigate to other page
+        holder.priceview.text= context.resources.getString(R.id.price_product, item.price)
+       if(item.isVip){
+           holder.productStar.setImageResource(R.drawable.ic_baseline_star_rate_24)
+       }
+
+        holder.buyQuantity.setOnClickListener {
+            if (item.quantityNumber > 0) {
+                val context = holder.itemView.context
+                val intent = Intent(context, ProductDetails::class.java)
+                intent.putExtra(ProductDetails.prodName,item.name)
+                context.startActivity(intent)
+            }
+            else{
+                val toast =Toast.makeText(context, "Item Not available",Toast.LENGTH_SHORT)
+                toast.show()
+            }
         }
 
     }

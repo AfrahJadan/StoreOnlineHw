@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/activity_main2.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/activity_product_details.xml" value="0.19293478260869565" />
         <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/buy_button.xml" value="0.19972826086956522" />
-        <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/list_item.xml" value="0.19972826086956522" />
+        <entry key="..\:/Users/AFRAH/AndroidStudioProjects/StoreOnlineHw/app/src/main/res/layout/list_item.xml" value="0.264" />
       </map>
     </option>
   </component>

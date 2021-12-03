@@ -2,6 +2,7 @@ package com.example.storeonlinehw.productAdapter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.storeonlinehw.MainActivity
 import com.example.storeonlinehw.databinding.ActivityMainBinding
 
 class BuyButton: AppCompatActivity() {
@@ -10,8 +11,7 @@ class BuyButton: AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        val  intentNameKey = intent.extras!!.getString("name")
 
     }
-
 }
+
